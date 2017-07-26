@@ -40,7 +40,8 @@ class TwitterClient(object):
         Utility function to classify sentiment of passed tweet
         using textblob's sentiment method
         '''
-        # create TextBlob object of passed tweet text
+        # create TextBlob object of passed tweet text  and send the tweet to the sentiment classifier
+        # -1.0 to 1.0 .
         analysis = TextBlob(self.clean_tweet(tweet))
         # set sentiment
         if analysis.sentiment.polarity > 0:
